@@ -1,0 +1,126 @@
+.header {
+  background-color: #e8eef5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header .container {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+}
+
+.logo {
+  text-decoration: none;
+  color: #333;
+}
+
+.logo h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.nav-center {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-center a, .nav-actions a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.nav-center a:not(.btn-link):hover, .nav-actions a:not(.btn-link):hover {
+  color: #007bff;
+}
+
+.btn-link {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-link:hover {
+  border-color: #007bff;
+  color: #000; /* mantener texto negro en hover */
+}
+
+.btn-link.primary {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.btn-link.primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  color: #000; /* texto negro al hover */
+}
+
+/* Botón de Iniciar sesión con tono gris acero */
+.btn-login {
+  background-color: #b0bec5; /* gris acero más claro */
+  color: #000;
+  border-color: #b0bec5;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-login:hover {
+  background-color: #9aa7af; /* gris neutro al hover (sin verde) */
+  border-color: #9aa7af;
+  color: #000;
+}
+
+.btn-logout {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-logout:hover {
+  background-color: #c82333;
+}
+
+.cart-link {
+  position: relative;
+  background-color: #ffc107;
+  color: #333;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .header .container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .nav-center {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
